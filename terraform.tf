@@ -7,8 +7,10 @@ terraform {
   }
 }
 
-variable "primary_region" {}
-variable "secondary_region" {}
+variable "primary_region" {
+  default = "ap-south-1"
+}
+#variable "secondary_region" {}
 variable "cidr_block" {
   type    = list(string)
   default = ["10.23.0.0/24"]
